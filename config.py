@@ -3,6 +3,6 @@ apiKey = "halyoa"
 # API KEY FOR THE API IS PUBLIC
 # DON'T ABUSE THE API
 apiParams = f"&sort=0&category=0&page=0&adult=0&key={apiKey}&concurrent=0&provider_ids[]=32"
-botToken = '1138041636:AAGIcw7033LPiOoJeAQf3CQ-mnJUsLq2Xxk'
+botToken = 'your bot token'
 supportChatUrl = "https://t.me/itorrentsupportchat"
 appUrl = 'https://play.google.com/store/apps/details?id=com.icodelife.itorrentsearch'
