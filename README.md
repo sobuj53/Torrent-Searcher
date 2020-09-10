@@ -16,4 +16,4 @@ If bot works fine, then disconnect the git repo from the app and remove the bot 
 
 
 # Credits
-[Max](https://t.me/@MaxWizard)
+[Maxx Wizard](https://t.me/MaxWizard)
