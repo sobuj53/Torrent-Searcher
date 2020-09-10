@@ -13,3 +13,7 @@ If bot works fine, then disconnect the git repo from the app and remove the bot 
 
 ## Also works on glitch.com ;)
 #### Tested bot: https://t.me/trntsrcbot
+
+
+# Credits
+[Max](https://t.me/@MaxWizard)
