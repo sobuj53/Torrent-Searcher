@@ -9,7 +9,7 @@
 
 
 ## Also works on glitch.com ;)
-#### Tested bot: https://t.me/trntsrcbot
+#### Tested bot: [Torrent Searcher](https://t.me/trntsrcbot)
 
 
 # Credits
