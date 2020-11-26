@@ -13,4 +13,4 @@
 
 
 # Credits
-Thanks [Maxx Wizard](https://t.me/MaxWizard) for the source code
+Thanks [Maxx](https://t.me/MAXXRlDER) for the source code
