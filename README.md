@@ -1,3 +1,5 @@
+# Dead!!!
+
 ## Heroku menual deployment process:
 ##### 1=> Import this repo as private
 ##### 2=> Just edit 6th line of config.py & put your bot token there
