@@ -1,5 +1,5 @@
 # Dead!!!
-Try this repo: https://github.com/devillD/Torrent-Searcher-Bot
+Try this: https://github.com/devillD/Torrent-Searcher/tree/main
 
 ## Heroku menual deployment process:
 ##### 1=> Import this repo as private
