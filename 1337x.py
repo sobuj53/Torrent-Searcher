@@ -53,6 +53,7 @@ async def find(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
+...     f"➲Size: `{a[i]['Size']}`\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
@@ -90,6 +91,7 @@ async def callback_query_next(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
+...     f"➲Size: `{a[i]['Size']}`\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
@@ -130,6 +132,7 @@ async def callback_query_previous(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
+...     f"➲Size: `{a[i]['Size']}`\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
