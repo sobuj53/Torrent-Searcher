@@ -1,4 +1,3 @@
-
 FROM sobuj53/trntsercbot:latest
 
 WORKDIR /BOT
