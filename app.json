@@ -13,6 +13,11 @@
     "success_url": "https://t.me/trntsrcbot",
     "stack": "container",
     "env": {
+      "BOT_CMD_POSTFIX": {
+        "description": "Enter your bot name like, @botname",
+        "value": "",
+        "required": false
+      },  
       "BOT_TOKEN": {
         "description": "The telegram bot token that you get from @BotFather.",
         "value": "",
@@ -27,11 +32,6 @@
         "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
         "value": "",
         "required": true
-      }
-      "BOT_CMD_POSTFIX": {
-        "description": "Enter you bot prefix like @botnamebot.",
-        "value": "",
-        "required": false
       }
     }
 }
