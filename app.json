@@ -28,5 +28,10 @@
         "value": "",
         "required": true
       }
+      "BOT_CMD_POSTFIX": {
+        "description": "Enter you bot prefix like @botnamebot.",
+        "value": "",
+        "required": false
+      }
     }
 }
