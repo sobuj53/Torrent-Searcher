@@ -4,22 +4,22 @@ import json
 from pyrogram import Client, filters, emoji
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-
+BOT_CMD_POSTFIX = os.environ.get("BOT_CMD_POSTFIX", "")
 app = Client("trntsrcbot", api_id=int(os.environ.get("API_ID")), api_hash=os.environ.get("API_HASH"), bot_token=os.environ.get("BOT_TOKEN"))
 
 
 print("\nBot Started\n")
 
 
-@app.on_message(filters.command(['start']))
+@app.on_message(filters.command(["start" + BOT_CMD_POSTFIX]))
 async def start(_, message):
     await message.reply_text("Hello I'm 1337x Torrent Scraper Bot\nSend /help To Show Help Screen\nBot by @unkusr")
 
 
 
-@app.on_message(filters.command(['help']))
+@app.on_message(filters.command(["help" + BOT_CMD_POSTFIX]))
 async def help(_, message):
-    await message.reply_text("Example: /find titanic")
+    await message.reply_text("Example: /find@botname titanic")
 
 m = None
 i = 0
@@ -27,7 +27,7 @@ a = None
 query = None
 
 
-@app.on_message(filters.command(["find"]))
+@app.on_message(filters.command(["find" + BOT_CMD_POSTFIX]))
 async def find(_, message):
     global m
     global i
@@ -38,7 +38,7 @@ async def find(_, message):
     except:
         pass
     if len(message.command) < 2:
-        await message.reply_text("Usage: /find query")
+        await message.reply_text("Usage: /find@botname query")
         return
     query = message.text.split(None, 1)[1].replace(" ", "%20")
     m = await message.reply_text("Searching")
@@ -53,7 +53,7 @@ async def find(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: `{a[i]['Size']}`\n"
+        f"➲Size: {a[i]['Size']}\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
@@ -62,7 +62,7 @@ async def find(_, message):
         f"➲Language: {a[i]['Language']} || "
         f"➲Checked: {a[i]['LastChecked']}\n"
         f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n"
+        f"➲Leeches: {a[i]['Leechers']}\n\n"
         f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
     )
     await m.edit(
@@ -91,7 +91,7 @@ async def callback_query_next(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: `{a[i]['Size']}`\n"
+        f"➲Size: {a[i]['Size']}\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
@@ -100,7 +100,7 @@ async def callback_query_next(_, message):
         f"➲Language: {a[i]['Language']} || "
         f"➲Checked: {a[i]['LastChecked']}\n"
         f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n"
+        f"➲Leeches: {a[i]['Leechers']}\n\n"
         f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
     )
     await m.edit(
@@ -132,7 +132,7 @@ async def callback_query_previous(_, message):
     result = (
         f"**Page - {i+1}**\n\n"
         f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: `{a[i]['Size']}`\n"
+        f"➲Size: {a[i]['Size']}\n"
         f"➲By {a[i]['UploadedBy']} "
         f"{a[i]['DateUploaded']}\n" 
         f"➲{a[i]['Type']} "
@@ -141,7 +141,7 @@ async def callback_query_previous(_, message):
         f"➲Language: {a[i]['Language']} || "
         f"➲Checked: {a[i]['LastChecked']}\n"
         f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n"
+        f"➲Leeches: {a[i]['Leechers']}\n\n"
         f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
     )
     await m.edit(
