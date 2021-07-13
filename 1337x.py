@@ -50,21 +50,27 @@ async def find(_, message):
     except:
         await m.edit("Found Nothing.")
         return
-    result = (
-        f"**Page - {i+1}**\n\n"
-        f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: {a[i]['Size']}\n"
-        f"➲By {a[i]['UploadedBy']} "
-        f"{a[i]['DateUploaded']}\n" 
-        f"➲{a[i]['Type']} "
-        f"{a[i]['Category']}\n"
-        f"➲Poster: {a[i]['Poster']}\n"
-        f"➲Language: {a[i]['Language']} || "
-        f"➲Checked: {a[i]['LastChecked']}\n"
-        f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n\n"
-        f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
-    )
+    
+    for j in range(3):
+        rdta = (
+            f"**Page - {i+1}**\n\n"
+            f"➲Name: `{a[i]['Name']}`\n"
+            f"➲Size: {a[i]['Size']}\n"
+            f"{a[i]['DateUploaded']}\n" 
+            f"➲{a[i]['Type']} "
+            f"{a[i]['Category']}\n"
+            f"➲Poster: {a[i]['Poster']}\n"
+            f"➲Language: {a[i]['Language']} || "
+            f"➲Seeds: {a[i]['Seeders']} & "
+            f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
+        )
+        i += 1
+        result=result+rdta 
+        #chec if value exists 
+        if 'Name' not in a[i]['Name']:
+            break
+       
+        
     await m.edit(
         result,
         reply_markup=InlineKeyboardMarkup(
@@ -88,21 +94,24 @@ async def callback_query_next(_, message):
     global a
     global query
     i += 1
-    result = (
-        f"**Page - {i+1}**\n\n"
-        f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: {a[i]['Size']}\n"
-        f"➲By {a[i]['UploadedBy']} "
-        f"{a[i]['DateUploaded']}\n" 
-        f"➲{a[i]['Type']} "
-        f"{a[i]['Category']}\n"
-        f"➲Poster: {a[i]['Poster']}\n"
-        f"➲Language: {a[i]['Language']} || "
-        f"➲Checked: {a[i]['LastChecked']}\n"
-        f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n\n"
-        f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
-    )
+    for j in range(3):
+        rdta = (
+            f"**Page - {i+1}**\n\n"
+            f"➲Name: `{a[i]['Name']}`\n"
+            f"➲Size: {a[i]['Size']}\n"
+            f"{a[i]['DateUploaded']}\n" 
+            f"➲{a[i]['Type']} "
+            f"{a[i]['Category']}\n"
+            f"➲Poster: {a[i]['Poster']}\n"
+            f"➲Language: {a[i]['Language']} || "
+            f"➲Seeds: {a[i]['Seeders']} & "
+            f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
+        )
+        i += 1
+        result=result+rdta 
+        #chec if value exists 
+        if 'Name' not in a[i]['Name']:
+            break
     await m.edit(
         result,
         reply_markup=InlineKeyboardMarkup(
@@ -129,21 +138,25 @@ async def callback_query_previous(_, message):
     global a
     global query
     i -= 1
-    result = (
-        f"**Page - {i+1}**\n\n"
-        f"➲Name: `{a[i]['Name']}`\n"
-        f"➲Size: {a[i]['Size']}\n"
-        f"➲By {a[i]['UploadedBy']} "
-        f"{a[i]['DateUploaded']}\n" 
-        f"➲{a[i]['Type']} "
-        f"{a[i]['Category']}\n"
-        f"➲Poster: {a[i]['Poster']}\n"
-        f"➲Language: {a[i]['Language']} || "
-        f"➲Checked: {a[i]['LastChecked']}\n"
-        f"➲Seeds: {a[i]['Seeders']} & "
-        f"➲Leeches: {a[i]['Leechers']}\n\n"
-        f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
-    )
+    for j in range(3):
+        rdta = (
+            f"**Page - {i+1}**\n\n"
+            f"➲Name: `{a[i]['Name']}`\n"
+            f"➲Size: {a[i]['Size']}\n"
+            f"{a[i]['DateUploaded']}\n" 
+            f"➲{a[i]['Type']} "
+            f"{a[i]['Category']}\n"
+            f"➲Poster: {a[i]['Poster']}\n"
+            f"➲Language: {a[i]['Language']} || "
+            f"➲Seeds: {a[i]['Seeders']} & "
+            f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
+        )
+        i -= 1
+        result=result+rdta 
+        #chec if value exists 
+        if 'Name' not in a[i]['Name']:
+            break
+            
     await m.edit(
         result,
         reply_markup=InlineKeyboardMarkup(
