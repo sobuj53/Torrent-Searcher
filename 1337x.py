@@ -51,6 +51,7 @@ async def find(_, message):
         await m.edit("Found Nothing.")
         return
     
+    result=''
     for j in range(3):
         rdta = (
             f"**Page - {i+1}**\n\n"
@@ -94,6 +95,7 @@ async def callback_query_next(_, message):
     global a
     global query
     i += 1
+    result=''
     for j in range(3):
         rdta = (
             f"**Page - {i+1}**\n\n"
@@ -138,6 +140,7 @@ async def callback_query_previous(_, message):
     global a
     global query
     i -= 1
+    result=''
     for j in range(3):
         rdta = (
             f"**Page - {i+1}**\n\n"
