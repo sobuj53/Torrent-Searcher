@@ -66,10 +66,10 @@ async def find(_, message):
             f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
         )
         i += 1
-        result=result+rdta 
+        result += rdta  
         #chec if value exists 
-        if 'Name' not in a[i]['Name']:
-            break
+        #if 'Name' not in a[i]['Name']:
+            #break
        
         
     await m.edit(
@@ -110,10 +110,10 @@ async def callback_query_next(_, message):
             f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
         )
         i += 1
-        result=result+rdta 
+        result += rdta 
         #chec if value exists 
-        if 'Name' not in a[i]['Name']:
-            break
+        #if 'Name' not in a[i]['Name']:
+            #break
     await m.edit(
         result,
         reply_markup=InlineKeyboardMarkup(
@@ -155,10 +155,10 @@ async def callback_query_previous(_, message):
             f"➲Magnet: `{a[i]['Magnet']}`\n\n\n"
         )
         i -= 1
-        result=result+rdta 
+        result += rdta 
         #chec if value exists 
-        if 'Name' not in a[i]['Name']:
-            break
+        #if 'Name' not in a[i]['Name']:
+            #break
             
     await m.edit(
         result,
